@@ -45,6 +45,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField('username', unique=True, max_length=100)
     email = models.EmailField('email', null=True, max_length=100)
     first_name = models.CharField('first name', max_length=30, blank=True)
+    firebase_token = models.CharField('FCM token', max_length=255, blank=True)
     last_name = models.CharField('last name', max_length=30, blank=True)
     date_joined = models.DateTimeField('date joined', auto_now_add=True)
     is_active = models.BooleanField('active', default=True)

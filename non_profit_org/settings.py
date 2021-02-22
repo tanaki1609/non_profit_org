@@ -22,6 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'h*7jfp(h=3rychww_e$d1ulws8=t+$d^#e)0jiqw8t)g40irye'
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -41,10 +42,10 @@ INSTALLED_APPS = [
     'news_npo',
     'rest_framework',
     'rest_framework.authtoken',
+    'drf_yasg',
     'publication',
     'law',
     'consultation',
-
 ]
 
 
@@ -56,6 +57,7 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 1,
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
 }
 
 
